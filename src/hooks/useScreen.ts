@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 /**
  * Enum of screen sized
  */
-enum ScreenSizeEnum {
+export enum ScreenSizeEnum {
   isMobile = 'isMobile',
   isTablet = 'isTablet',
   isLaptop = 'isLaptop',

@@ -1,3 +1,8 @@
-import useScreen from './useScreen';
+import useScreen, { ScreenSizeEnum } from './useScreen';
+
+
+export {
+  ScreenSizeEnum
+}
 
 export { useScreen };

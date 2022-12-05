@@ -10,19 +10,16 @@ interface NavbarProps extends BoxProps {
   spx?: number | string;
   /** margin spacing applied to each child in the Navbar */
   sp?: number | string;
-
   /** Button that will be displayed on Mobile size screens */
-  mobileButton: ReactNode | ReactElement;
+  mobileButton?: ReactNode | ReactElement;
 }
 
 const Navbar: FC<NavbarProps> = (props) => {
-
   const screens = useScreen();
   const {
     children,
     component = 'nav',
     display = 'flex',
-    flexDirection = 'row',
     sx,
     sp,
     spx,
@@ -30,17 +27,9 @@ const Navbar: FC<NavbarProps> = (props) => {
     mobileButton
   } = props;
 
-  useEffect(() => {
-    console.log(screens)
-  }, [screens])
-
-
   if (screens.isMobile) {
-    return <Box>
-      {mobileButton}
-    </Box>
+    return <Box>{mobileButton}</Box>;
   }
-
 
   return (
     <>
@@ -48,7 +37,7 @@ const Navbar: FC<NavbarProps> = (props) => {
         component={component}
         sx={{
           display: display,
-          flexDirection: flexDirection,
+          flexDirection: 'row',
           ...sx
         }}>
         {React.Children.map(children, (child) => {
@@ -59,7 +48,7 @@ const Navbar: FC<NavbarProps> = (props) => {
                 mx: spx || sp,
                 textAlign: 'center',
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: 'center'
               }}>
               {child}
             </Box>
