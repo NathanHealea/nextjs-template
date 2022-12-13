@@ -105,9 +105,17 @@ npm run dev
 
 Additional Next CLI development information - [https://nextjs.org/docs/api-reference/cli#development](https://nextjs.org/docs/api-reference/cli#development)
 
+### `format`
+
+Runs Prettier formatter on files.
+
+```
+npm run format
+```
+
 ### `lint`
 
-Rune ESLint for all fields in the `pages/`, `components/`, and `modules/` directories.
+Runs ESLint for all fields in the `pages/`, `components/`, and `modules/` directories.
 
 ```
 npm run lint

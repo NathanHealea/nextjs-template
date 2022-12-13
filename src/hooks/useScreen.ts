@@ -8,7 +8,7 @@ export enum ScreenSizeEnum {
   isMobile = 'isMobile',
   isTablet = 'isTablet',
   isLaptop = 'isLaptop',
-  isDesktop = 'isDesktop'
+  isDesktop = 'isDesktop',
 }
 
 /**
@@ -36,7 +36,7 @@ function useScreen(): ScreenSize {
     [ScreenSizeEnum.isLaptop]: useMediaQuery(
       theme.breakpoints.between('md', 'xl')
     ),
-    [ScreenSizeEnum.isDesktop]: useMediaQuery(theme.breakpoints.up('xl'))
+    [ScreenSizeEnum.isDesktop]: useMediaQuery(theme.breakpoints.up('xl')),
   } as ScreenSize;
 
   return screens;
