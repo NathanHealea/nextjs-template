@@ -146,3 +146,8 @@ Additional Next CLI production information - [https://nextjs.org/docs/api-refere
 ## 📦 Notable Packages
 
 - [Redux-Toolkit](https://redux-toolkit.js.org/) - Opinionated, batteries-included toolset for efficient Redux development.
+
+### Development Packages
+
+- [Prettier](https://prettier.io/) - an opinionated code formatter.
+- [ESLint](https://eslint.org/) - Static code analysis tool for identifying problematic patterns found in JavaScript Code.
