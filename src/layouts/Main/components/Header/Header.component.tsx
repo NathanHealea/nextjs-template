@@ -2,9 +2,8 @@ import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import Toolbar, { ToolbarProps } from '@mui/material/Toolbar';
 import { FC } from 'react';
 
-
 interface HeaderProps extends AppBarProps {
-  toolbarProps?: ToolbarProps
+  toolbarProps?: ToolbarProps;
 }
 
 const Header: FC<HeaderProps> = (props) => {

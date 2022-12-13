@@ -1,8 +1,5 @@
 import useScreen, { ScreenSizeEnum } from './useScreen';
 
-
-export {
-  ScreenSizeEnum
-}
+export { ScreenSizeEnum };
 
 export { useScreen };

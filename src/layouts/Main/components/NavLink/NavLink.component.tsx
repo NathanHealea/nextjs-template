@@ -1,10 +1,13 @@
 import { Button, ButtonProps } from '@mui/material';
 import { FC } from 'react';
-import { NextLinkComposed, NextLinkComposedProps } from '../../../../components/Link.component';
+import {
+  NextLinkComposed,
+  NextLinkComposedProps,
+} from '../../../../components/Link.component';
 
-
-interface NavLinkProps extends NextLinkComposedProps, Pick<ButtonProps, "startIcon" | "endIcon"> {
-}
+interface NavLinkProps
+  extends NextLinkComposedProps,
+    Pick<ButtonProps, 'startIcon' | 'endIcon'> {}
 
 const NavLink: FC<NavLinkProps> = (props) => {
   const { children, to, startIcon, endIcon, target } = props;

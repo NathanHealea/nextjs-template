@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 
 export enum SidebarStateEnum {
   Opened = 'Opened',
-  Closed = 'Closed'
+  Closed = 'Closed',
 }
 
 export type SidebarState = keyof typeof SidebarStateEnum;
@@ -33,7 +33,7 @@ const Sidebar: FC<SidebarProps> = (props) => {
       [ScreenSizeEnum.isMobile]: '100vw',
       [ScreenSizeEnum.isTablet]: '256px',
       [ScreenSizeEnum.isLaptop]: '256px',
-      [ScreenSizeEnum.isDesktop]: '256px'
+      [ScreenSizeEnum.isDesktop]: '256px',
     } as DynamicScreenWidth,
     drawerHeader,
     drawerState,
@@ -98,20 +98,23 @@ const Sidebar: FC<SidebarProps> = (props) => {
       anchor={anchor}
       PaperProps={{
         sx: {
-          width: getDrawerWidth()
-        }
+          width: getDrawerWidth(),
+        },
       }}
       onClose={handleOnClose}
-      {...rest}>
+      {...rest}
+    >
       <Toolbar
         sx={{
           display: 'flex',
-          flexDirection: 'row'
-        }}>
+          flexDirection: 'row',
+        }}
+      >
         <Box
           sx={{
-            flexGrow: '1'
-          }}>
+            flexGrow: '1',
+          }}
+        >
           {drawerHeader}
         </Box>
 

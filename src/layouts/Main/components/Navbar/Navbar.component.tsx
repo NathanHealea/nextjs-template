@@ -24,7 +24,7 @@ const Navbar: FC<NavbarProps> = (props) => {
     sp,
     spx,
     spy,
-    mobileButton
+    mobileButton,
   } = props;
 
   if (screens.isMobile) {
@@ -38,8 +38,9 @@ const Navbar: FC<NavbarProps> = (props) => {
         sx={{
           display: display,
           flexDirection: 'row',
-          ...sx
-        }}>
+          ...sx,
+        }}
+      >
         {React.Children.map(children, (child) => {
           return (
             <Box
@@ -48,8 +49,9 @@ const Navbar: FC<NavbarProps> = (props) => {
                 mx: spx || sp,
                 textAlign: 'center',
                 display: 'flex',
-                justifyContent: 'center'
-              }}>
+                justifyContent: 'center',
+              }}
+            >
               {child}
             </Box>
           );

@@ -6,15 +6,16 @@ import { FC } from 'react';
 
 import Package from '../../../../package.json';
 
-interface FooterProps { }
+interface FooterProps {}
 
 const Footer: FC<FooterProps> = (props) => {
   return (
     <Box
       component='footer'
       sx={{
-        py: 4
-      }}>
+        py: 4,
+      }}
+    >
       <Container maxWidth='xl'>
         <Box
           sx={{
@@ -22,13 +23,15 @@ const Footer: FC<FooterProps> = (props) => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            textAlign: 'center'
-          }}>
+            textAlign: 'center',
+          }}
+        >
           <Typography>Built with NextJs, MUI, &amp; ❤️</Typography>
           <Button
             component='a'
             href=' https://nathanhealea.com'
-            target='_blank'>
+            target='_blank'
+          >
             Created by Nathan Healea
           </Button>
           <Typography variant='caption'>v{Package.version}</Typography>
