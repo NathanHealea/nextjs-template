@@ -19,6 +19,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "npx prettier --write .",
     "version:major": "npm version major --force",
     "version:minor": "npm version minor --force",
     "version:patch": "npm version patch --force"
@@ -40,5 +41,9 @@
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.8.1"
   }
 }
