@@ -1,19 +1,16 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { NextPageContext } from 'next/types';
-import { FC } from 'react';
-import Container from '../components/Container.component';
 import { NextLinkComposed } from '../components/Link.component';
-import Page from '../components/Page.component';
+import CenterLayout from '../layouts/Center';
+import { NextPage } from '../next.type';
 
-interface NotFoundProps extends NextPageContext {}
+interface NotFoundProps {}
 
-const NotFoundPage: FC<NotFoundProps> = (props) => {
+const NotFoundPage: NextPage<NotFoundProps> = (props) => {
   return (
-    <Page
+    <Box
       sx={{
-        flexGrow: '1',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -21,17 +18,18 @@ const NotFoundPage: FC<NotFoundProps> = (props) => {
         textAlign: 'center',
       }}
     >
-      <Container>
-        <Box sx={{}}>
-          <Typography variant='h1'>Not Found</Typography>
-          <Typography variant='h4'>404</Typography>
-          <Button component={NextLinkComposed} to='/' variant='contained'>
-            Back to Home
-          </Button>
-        </Box>
-      </Container>
-    </Page>
+      <Typography variant='h1'>Not Found</Typography>
+      <Typography variant='h4'>404</Typography>
+      <Box sx={{ display: 'block', py: 1 }} />
+      <Button component={NextLinkComposed} to='/' variant='contained'>
+        Back to Home
+      </Button>
+    </Box>
   );
+};
+
+NotFoundPage.getLayout = (page) => {
+  return <CenterLayout>{page}</CenterLayout>;
 };
 
 export default NotFoundPage;

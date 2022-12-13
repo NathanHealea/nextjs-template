@@ -2,31 +2,28 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '../components/Container.component';
 import Page from '../components/Page.component';
+import CenterLayout from '../layouts/Center';
+import { NextPage } from '../next.type';
 
-export default function Home() {
+const HomePage: NextPage = (props) => {
   return (
-    <Page
+    <Box
       sx={{
-        flexGrow: '1',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        textAlign: 'center',
       }}
     >
-      <Container>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-          }}
-        >
-          <Typography variant='h1'>NextJS Template</Typography>
-          <Typography variant='h4'>Build with NextJS, MUI, and 🧡</Typography>
-        </Box>
-      </Container>
-    </Page>
+      <Typography variant='h1'>NextJS Template</Typography>
+      <Typography variant='h4'>Build with NextJS, MUI, and 🧡</Typography>
+    </Box>
   );
-}
+};
+
+HomePage.getLayout = (page) => {
+  return <CenterLayout>{page}</CenterLayout>;
+};
+
+export default HomePage;
