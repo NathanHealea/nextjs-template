@@ -7,14 +7,17 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '../styles/globals.css';
-import { Box } from '@mui/material';
 import MainLayout from '../layouts/Main';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <Provider store={store}>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </Provider>
   );
 };
 
