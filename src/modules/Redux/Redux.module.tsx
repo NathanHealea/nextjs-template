@@ -1,14 +1,14 @@
+import AddIcon from '@mui/icons-material/Add';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { FC } from 'react';
 import Container from '../../components/Container.component';
 import Page from '../../components/Page.component';
-import { useDispatch, useSelector } from '../../store';
-import { RootState } from '../../store/redux.types';
-import { actions } from './Redux.store';
-import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import Typography from '@mui/material/Typography';
+import { FC } from 'react';
+import { RootState } from '../../store/redux.types';
+import { actions } from './Redux.slice';
+import { useDispatch, useSelector } from '../../store';
 
 interface ReduxModuleProps {}
 
