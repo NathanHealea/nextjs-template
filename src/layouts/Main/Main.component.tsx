@@ -5,7 +5,7 @@ import Footer from './components/Footer.component';
 import Header, {
   HeaderCenter,
   HeaderEnd,
-  HeaderStart
+  HeaderStart,
 } from './components/Header';
 import Navbar from './components/Navbar';
 
@@ -17,7 +17,7 @@ import Sidebar from './components/Sidebar';
 import Typography from '@mui/material/Typography';
 import {
   SidebarState,
-  SidebarStateEnum
+  SidebarStateEnum,
 } from './components/Sidebar/Sidebar.component';
 
 interface MainLayoutProps {
@@ -41,8 +41,9 @@ const MainLayout: FC<MainLayoutProps> = (props) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '100vh'
-      }}>
+        minHeight: '100vh',
+      }}
+    >
       <Header>
         <HeaderStart>
           <Button component={NextLinkComposed} to='/'>
@@ -57,13 +58,16 @@ const MainLayout: FC<MainLayoutProps> = (props) => {
               <Button onClick={handleOpenSidebar}>
                 <MenuIcon />
               </Button>
-            }>
+            }
+          >
             <NavLink to='/'>Home</NavLink>
+            <NavLink to='/redux'>Redux</NavLink>
             <NavLink to='/404'>Not Found</NavLink>
             <NavLink
               to='https://github.com/NathanHealea/nextjs-template'
               target='_blank'
-              startIcon={<GitHubIcon />}>
+              startIcon={<GitHubIcon />}
+            >
               Source Code
             </NavLink>
           </Navbar>
@@ -71,11 +75,13 @@ const MainLayout: FC<MainLayoutProps> = (props) => {
       </Header>
       <Sidebar drawerState={sidebarState} onClose={handleCloseSidebar}>
         <NavLink to='/'>Home</NavLink>
+        <NavLink to='/redux'>Redux</NavLink>
         <NavLink to='/404'>Not Found</NavLink>
         <NavLink
           to='https://github.com/NathanHealea/nextjs-template'
           target='_blank'
-          startIcon={<GitHubIcon />}>
+          startIcon={<GitHubIcon />}
+        >
           Source Code
         </NavLink>
       </Sidebar>
