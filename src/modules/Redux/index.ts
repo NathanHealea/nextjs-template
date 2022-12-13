@@ -1,4 +1,4 @@
-import { reduxSlice, reduces, actions } from './Redux.store';
+import { reduxSlice, reduces, actions } from './Redux.slice';
 import ReduxModule from './Redux.module';
 
 export { reduxSlice, reduces, actions };
