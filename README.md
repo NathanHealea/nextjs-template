@@ -18,7 +18,7 @@
 
 1. [Getting Started](#getting-started)
 2. [Commands](#commands)
-3. [Notable Packages](#notable-packages)
+3. [Notable Packages](#-notable-packages)
 
 ## Getting Started
 
